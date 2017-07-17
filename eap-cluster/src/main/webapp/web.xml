@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+  <display-name>Cluster Testing by Yusuf Hadiwinata</display-name>
+
+	<servlet>
+        	<servlet-name>SessionReplicationTest</servlet-name>
+        	<servlet-class>com.novell.test.SessionReplicationTest</servlet-class>
+    	</servlet>
+	<servlet>
+		<servlet-name>ServerEchoServlet</servlet-name>
+		<servlet-class>com.novell.test.ServerEchoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServerEchoServlet</servlet-name>
+		<url-pattern>/ServerEchoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SessionReplicationTest</servlet-name>
+		<url-pattern>/SessionReplicationTest</url-pattern>
+	</servlet-mapping>
+	<env-entry>
+		<env-entry-name>wssdk.test.disable</env-entry-name>
+		<env-entry-value>true</env-entry-value>
+		<env-entry-type>java.lang.Boolean</env-entry-type>
+	</env-entry>
+
+
+  <distributable/>
+</web-app>
+
+
